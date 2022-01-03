@@ -84,6 +84,10 @@ func (wf *WorkFlow) AutoConnectToEnd() {
 	}
 }
 
+func (wf *WorkFlow) Error() error {
+	return wf.err
+}
+
 // CheckDAG 检查是否是正常的DAG, 用于检查逻辑,实际运行可以关闭
 func (wf *WorkFlow) CheckDAG(visitFn func(node *TaskNode)) bool {
 	visitEdge := make(map[*TaskEdge]bool)

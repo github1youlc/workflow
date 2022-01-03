@@ -3,7 +3,7 @@ package workflow
 import "context"
 
 type ExecuteEnv interface {
-	Execute(workflow *WorkFlow)
+	Execute(ctx context.Context, workflow *WorkFlow)
 }
 
 type GoroutineExecuteEnv struct {

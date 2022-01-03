@@ -144,8 +144,8 @@ func TestGoroutineExecuteEnv_Err(t *testing.T) {
 	env.Execute(ctx, wf)
 	wf.WaitDone()
 
-	t.Log(wf.err)
-	assert.Error(t, wf.err)
+	t.Log(wf.Error())
+	assert.Error(t, wf.Error())
 }
 
 func BenchmarkGoroutineExecuteEnv_Execute(b *testing.B) {
